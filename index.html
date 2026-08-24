@@ -213,12 +213,13 @@
   .venue-actions{display:flex;gap:10px;flex-wrap:wrap;}
 
   /* Sponsors / footer */
-  .sponsor-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px;}
-  .sponsor-row span{
+  .sponsor-row{display:flex;flex-wrap:wrap;gap:16px;margin-top:20px;align-items:center;}
+  .sponsor-row .logo-card{
     background:#fff;border:1px solid var(--line);border-radius:12px;
-    padding:14px 22px;font-weight:700;font-size:14px;color:var(--navy-2);
-    box-shadow:var(--shadow);
+    padding:16px 24px;display:flex;align-items:center;
+    box-shadow:var(--shadow);height:64px;
   }
+  .sponsor-row .logo-card img{height:100%;width:auto;max-width:220px;object-fit:contain;}
   footer{background:var(--navy);color:#a9bcdd;padding:48px 0 30px;font-size:13.5px;}
   footer .f-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.1);}
   footer .f-brand{color:#fff;font-weight:800;font-size:15px;}
@@ -512,8 +513,10 @@
           <a class="btn btn-primary" href="https://forms.gle/hvBchSnbMu6ddqPE8" target="_blank" rel="noopener">Google Form으로 참가신청하기 →</a>
         </div>
         <div class="qr-box">
-          <img src="assets/qr.png" alt="참가신청 페이지 QR코드">
-          <div class="cap">QR 스캔 → 본 페이지 접속</div>
+          <a href="https://forms.gle/hvBchSnbMu6ddqPE8" target="_blank" rel="noopener">
+            <img src="assets/qr-form.png" alt="참가신청 구글폼 QR코드">
+          </a>
+          <div class="cap">QR 스캔 → 참가신청 폼으로 이동</div>
         </div>
       </div>
     </div>
@@ -543,12 +546,14 @@
 <section style="background:#fff;">
   <div class="wrap">
     <p style="font-weight:700;color:var(--muted);font-size:13px;letter-spacing:.05em;">후원</p>
-    <div class="sponsor-row"><span>식품의약품안전처</span></div>
+    <div class="sponsor-row">
+      <div class="logo-card"><img src="assets/logo-mfds.png" alt="식품의약품안전처"></div>
+    </div>
     <p style="font-weight:700;color:var(--muted);font-size:13px;letter-spacing:.05em;margin-top:26px;">주관</p>
     <div class="sponsor-row">
-      <span>서울성모병원 임상약리과</span>
-      <span>사단법인 청람바이오아카데미</span>
-      <span>가톨릭대학교 약학대학</span>
+      <div class="logo-card"><img src="assets/logo-clinpharm.png" alt="가톨릭대학교 서울성모병원 임상약리과"></div>
+      <div class="logo-card"><img src="assets/logo-cheongram.png" alt="청람바이오아카데미"></div>
+      <div class="logo-card"><img src="assets/logo-cupharm.png" alt="가톨릭대학교 약학대학"></div>
     </div>
   </div>
 </section>
