@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 신약규제과학 학술심포지엄 | 서울성모병원 임상약리과 20주년</title>
+<meta name="description" content="AI × Regulatory Science 학술심포지엄 — 서울성모병원 임상약리과 20주년 개소 기념. 2026년 9월 30일(수) 엘리에나호텔 서울 강남.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B1F3A'/%3E%3Ctext x='50' y='68' font-size='54' font-family='Arial' font-weight='800' fill='%234FD1D9' text-anchor='middle'%3EAI%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0b1f3a;
+    --navy-2:#132a4d;
+    --navy-3:#1c3a63;
+    --cyan:#4fd1d9;
+    --cyan-2:#7fe3e9;
+    --gold:#e8b957;
+    --paper:#f6f8fb;
+    --ink:#0b1f3a;
+    --muted:#5b6b85;
+    --line:#e3e8f0;
+    --radius:16px;
+    --shadow:0 10px 30px rgba(11,31,58,.08);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Noto Sans KR','Pretendard',-apple-system,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+  section{padding:96px 0;}
+  h1,h2,h3{margin:0;line-height:1.25;}
+  .eyebrow{
+    font-size:13px;letter-spacing:.18em;font-weight:700;color:var(--cyan-2);
+    text-transform:uppercase;
+  }
+  .section-title{font-size:clamp(26px,3.4vw,36px);font-weight:800;margin:10px 0 14px;}
+  .section-desc{color:var(--muted);font-size:16px;max-width:680px;}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(79,209,217,.12);color:var(--navy-2);
+    border:1px solid rgba(79,209,217,.35);
+    padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;
+  }
+
+  /* Header */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(11,31,58,.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{color:#fff;font-weight:800;font-size:15px;display:flex;align-items:center;gap:8px;}
+  .brand .dot{width:10px;height:10px;border-radius:3px;background:var(--cyan);}
+  nav.links{display:flex;align-items:center;gap:28px;}
+  nav.links a{color:#cfe0f5;font-size:14px;font-weight:600;}
+  nav.links a:hover{color:#fff;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:11px 22px;border-radius:999px;font-weight:700;font-size:14px;
+    cursor:pointer;border:none;transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:linear-gradient(135deg,var(--cyan),var(--cyan-2));color:var(--navy);box-shadow:0 8px 20px rgba(79,209,217,.35);}
+  .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35);}
+  .btn-dark{background:var(--navy);color:#fff;}
+  .btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy);}
+  .menu-toggle{display:none;background:none;border:none;color:#fff;font-size:22px;cursor:pointer;}
+
+  /* Hero */
+  .hero{
+    position:relative;overflow:hidden;
+    background:radial-gradient(1200px 600px at 80% -10%, rgba(79,209,217,.18), transparent 60%),
+               linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 55%,#0a1730 100%);
+    color:#fff;padding:168px 0 96px;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(circle at 15% 30%, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size:26px 26px;opacity:.5;
+  }
+  .hero-inner{position:relative;z-index:1;}
+  .hero .eyebrow{color:var(--cyan-2);}
+  .hero h1{
+    font-size:clamp(30px,5.2vw,56px);font-weight:800;margin:14px 0 8px;letter-spacing:-.01em;
+  }
+  .hero h1 small{display:block;font-size:.52em;color:#cfe0f5;font-weight:600;margin-top:8px;}
+  .hero .theme{
+    margin-top:18px;font-size:17px;color:#dbe7f7;max-width:640px;
+    border-left:3px solid var(--cyan);padding-left:16px;
+  }
+  .hero-meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;}
+  .meta-card{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+    border-radius:12px;padding:14px 18px;min-width:170px;
+  }
+  .meta-card .label{font-size:12px;color:#9fb4d6;font-weight:600;letter-spacing:.05em;}
+  .meta-card .value{font-size:15px;font-weight:700;margin-top:4px;}
+  .hero-cta{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap;}
+  .countdown{display:flex;gap:10px;margin-top:34px;}
+  .cd-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:12px 16px;min-width:74px;text-align:center;}
+  .cd-box .num{font-size:24px;font-weight:800;color:var(--cyan-2);}
+  .cd-box .unit{font-size:11px;color:#9fb4d6;margin-top:2px;}
+
+  /* Info grid */
+  .grid{display:grid;gap:18px;}
+  .grid-4{grid-template-columns:repeat(4,1fr);}
+  .grid-3{grid-template-columns:repeat(3,1fr);}
+  .grid-2{grid-template-columns:repeat(2,1fr);}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px;box-shadow:var(--shadow);
+  }
+  .card .icon{font-size:22px;margin-bottom:10px;}
+  .card h3{font-size:16px;font-weight:700;margin-bottom:6px;}
+  .card p{color:var(--muted);font-size:14px;margin:0;}
+  .card .strong{color:var(--ink);font-weight:600;}
+
+  .host-list{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px;}
+  .host-list span{
+    background:#fff;border:1px solid var(--line);border-radius:999px;
+    padding:8px 16px;font-size:13.5px;font-weight:600;color:var(--navy-2);
+  }
+
+  /* Program */
+  .tabs{display:flex;gap:10px;margin:28px 0 32px;flex-wrap:wrap;}
+  .tab-btn{
+    padding:10px 20px;border-radius:999px;border:1.5px solid var(--line);
+    background:#fff;font-weight:700;font-size:14px;color:var(--muted);cursor:pointer;
+  }
+  .tab-btn.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+  .tab-panel{display:none;}
+  .tab-panel.active{display:block;}
+
+  .timeline{position:relative;padding-left:2px;}
+  .t-session{margin-bottom:34px;}
+  .t-session-head{
+    display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+    padding-bottom:10px;border-bottom:2px solid var(--navy);margin-bottom:14px;
+  }
+  .t-session-head .time{font-weight:800;color:var(--navy);font-size:15px;}
+  .t-session-head .tag{
+    background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;
+    padding:3px 10px;border-radius:6px;letter-spacing:.03em;
+  }
+  .t-session-head h4{font-size:18px;font-weight:800;}
+  .t-session-head .chair{font-size:13px;color:var(--muted);margin-left:auto;}
+  .t-row{
+    display:grid;grid-template-columns:120px 1fr 200px;gap:14px;
+    padding:14px 0;border-bottom:1px solid var(--line);align-items:start;
+  }
+  .t-row:last-child{border-bottom:none;}
+  .t-row .time{font-weight:700;color:var(--navy-2);font-size:13.5px;white-space:nowrap;}
+  .t-row .title-ko{font-weight:700;font-size:15px;}
+  .t-row .title-en{font-size:13px;color:var(--muted);margin-top:2px;}
+  .t-row .speaker{font-size:13.5px;color:var(--muted);text-align:right;}
+  .t-row.break{background:#f6f8fb;border-radius:10px;padding:12px 14px;}
+  .t-row.break .title-ko{color:var(--muted);font-weight:600;}
+
+  /* Poster */
+  .poster-layout{display:grid;grid-template-columns:280px 1fr;gap:36px;align-items:start;}
+  .poster-frame{
+    border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);
+    box-shadow:var(--shadow);background:#fff;
+  }
+  .poster-list{display:flex;flex-direction:column;gap:12px;}
+  .poster-item{
+    background:#fff;border:1px solid var(--line);border-radius:12px;
+    padding:16px 18px;display:flex;gap:14px;align-items:flex-start;
+  }
+  .poster-item .pnum{
+    flex:none;width:40px;height:40px;border-radius:10px;background:var(--navy);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;
+  }
+  .poster-item .p-title{font-weight:700;font-size:14.5px;}
+  .poster-item .p-sub{font-size:13px;color:var(--muted);margin-top:4px;}
+
+  /* Registration */
+  .reg{
+    background:linear-gradient(160deg,var(--navy),var(--navy-2));
+    color:#fff;border-radius:24px;padding:56px;
+  }
+  .reg-grid{display:grid;grid-template-columns:1fr 260px;gap:44px;align-items:center;}
+  .reg h2{color:#fff;}
+  .reg .section-desc{color:#cfe0f5;}
+  .reg-fields{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 30px;}
+  .reg-fields span{
+    background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+    border-radius:999px;padding:7px 15px;font-size:13px;font-weight:600;
+  }
+  .qr-box{
+    background:#fff;border-radius:16px;padding:18px;text-align:center;
+  }
+  .qr-box img{width:100%;border-radius:8px;}
+  .qr-box .cap{color:var(--navy);font-size:12.5px;font-weight:700;margin-top:10px;}
+
+  /* Venue */
+  .venue-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:32px;box-shadow:var(--shadow);
+  }
+  .venue-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;align-items:flex-start;}
+  .venue-actions{display:flex;gap:10px;flex-wrap:wrap;}
+
+  /* Sponsors / footer */
+  .sponsor-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px;}
+  .sponsor-row span{
+    background:#fff;border:1px solid var(--line);border-radius:12px;
+    padding:14px 22px;font-weight:700;font-size:14px;color:var(--navy-2);
+    box-shadow:var(--shadow);
+  }
+  footer{background:var(--navy);color:#a9bcdd;padding:48px 0 30px;font-size:13.5px;}
+  footer .f-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.1);}
+  footer .f-brand{color:#fff;font-weight:800;font-size:15px;}
+  footer .f-bottom{padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+
+  .fab{
+    position:fixed;bottom:22px;right:22px;z-index:90;
+    box-shadow:0 12px 30px rgba(11,31,58,.35);
+  }
+
+  @media (max-width:860px){
+    nav.links{display:none;}
+    .menu-toggle{display:block;}
+    .grid-4{grid-template-columns:repeat(2,1fr);}
+    .grid-3{grid-template-columns:1fr;}
+    .grid-2{grid-template-columns:1fr;}
+    .poster-layout{grid-template-columns:1fr;}
+    .reg-grid{grid-template-columns:1fr;}
+    .t-row{grid-template-columns:1fr;gap:4px;}
+    .t-row .speaker{text-align:left;}
+    section{padding:64px 0;}
+    .reg{padding:32px 22px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand"><span class="dot"></span> AI 신약규제과학 심포지엄</div>
+    <nav class="links">
+      <a href="#about">소개</a>
+      <a href="#program">프로그램</a>
+      <a href="#poster">포스터</a>
+      <a href="#venue">오시는길</a>
+    </nav>
+    <a class="btn btn-primary" href="https://forms.gle/Mur73yG9cTGG7r9Z7" target="_blank" rel="noopener">참가신청</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">AI × REGULATORY SCIENCE</span>
+    <h1>AI 신약규제과학 학술심포지엄
+      <small>서울성모병원 임상약리과 20주년 개소 기념</small>
+    </h1>
+    <p class="theme">임상약리학의 20년 성과와 AI 융합 미래 혁신 방향</p>
+
+    <div class="hero-meta">
+      <div class="meta-card"><div class="label">DATE</div><div class="value">2026. 9. 30.(수) 09:30–18:30</div></div>
+      <div class="meta-card"><div class="label">VENUE</div><div class="value">엘리에나호텔 서울 강남 · 2F 컨벤션홀</div></div>
+      <div class="meta-card"><div class="label">HOST</div><div class="value">서울성모병원 임상약리과 외 2개 기관</div></div>
+    </div>
+
+    <div class="countdown" id="countdown">
+      <div class="cd-box"><div class="num" id="cd-d">--</div><div class="unit">DAYS</div></div>
+      <div class="cd-box"><div class="num" id="cd-h">--</div><div class="unit">HOURS</div></div>
+      <div class="cd-box"><div class="num" id="cd-m">--</div><div class="unit">MIN</div></div>
+      <div class="cd-box"><div class="num" id="cd-s">--</div><div class="unit">SEC</div></div>
+    </div>
+
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="https://forms.gle/Mur73yG9cTGG7r9Z7" target="_blank" rel="noopener">참가신청 →</a>
+      <a class="btn btn-ghost" href="assets/poster.pdf" target="_blank" rel="noopener">포스터 PDF 보기</a>
+      <a class="btn btn-ghost" href="#program">프로그램 보기</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--navy-2)">ABOUT</span>
+    <h2 class="section-title">행사 개요</h2>
+    <p class="section-desc">
+      서울성모병원 임상약리과 개소 20주년을 기념하여, 임상약리학의 성과를 돌아보고 AI 융합을 통한 신약규제과학의 미래 혁신 방향을 모색하는 학술심포지엄을 개최합니다.
+      국내외 임상시험·규제과학 전문가가 함께하는 세 개의 메인 세션과 GATERS 위성세션, 대학원생·연구원 포스터 세션으로 구성됩니다.
+    </p>
+
+    <div class="grid grid-4" style="margin-top:32px;">
+      <div class="card">
+        <div class="icon">📅</div>
+        <h3>일시</h3>
+        <p class="strong">2026년 9월 30일(수)</p>
+        <p>09:30 – 18:30</p>
+      </div>
+      <div class="card">
+        <div class="icon">📍</div>
+        <h3>장소</h3>
+        <p class="strong">엘리에나호텔 서울 강남</p>
+        <p>2F 컨벤션홀</p>
+      </div>
+      <div class="card">
+        <div class="icon">🎯</div>
+        <h3>주제</h3>
+        <p class="strong">AI × Regulatory Science</p>
+        <p>임상약리학 20년 · AI 융합 미래</p>
+      </div>
+      <div class="card">
+        <div class="icon">👥</div>
+        <h3>참석대상</h3>
+        <p>임상약리·규제과학 연구진, 교수진, CRO 관계자, 의과대학생·대학원생</p>
+      </div>
+    </div>
+
+    <p style="margin-top:36px;font-weight:700;color:var(--muted);font-size:13px;letter-spacing:.05em;">주최 / 주관</p>
+    <div class="host-list">
+      <span>서울성모병원 임상약리과</span>
+      <span>사단법인 청람바이오아카데미</span>
+      <span>가톨릭대학교 약학대학</span>
+    </div>
+  </div>
+</section>
+
+<section id="program" style="background:#fff;">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--navy-2)">PROGRAMME</span>
+    <h2 class="section-title">프로그램</h2>
+    <p class="section-desc">메인 프로그램(개회식 · Session 1–3)과 GATERS 2026 위성세션(오전, 동시진행)으로 구성됩니다.</p>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="main">메인 프로그램 (13:30–18:20)</button>
+      <button class="tab-btn" data-tab="gaters">GATERS 위성세션 (09:40–11:40)</button>
+    </div>
+
+    <div class="tab-panel active" id="tab-main">
+      <div class="timeline">
+
+        <div class="t-session">
+          <div class="t-session-head">
+            <span class="time">13:30–13:55</span>
+            <h4>개회식 · 20주년 기념식</h4>
+          </div>
+          <div class="t-row"><div class="time">12:50–13:30</div><div><div class="title-ko">등록 — 오후행사 등록 및 네트워킹</div></div><div class="speaker"></div></div>
+          <div class="t-row"><div class="time">13:30</div><div><div class="title-ko">개회사</div></div><div class="speaker">한승훈 교수 (서울성모병원 임상약리과장)</div></div>
+          <div class="t-row"><div class="time">13:35</div><div><div class="title-ko">환영사</div></div><div class="speaker">민창기 (가톨릭대학교 의무부총장·의료원장)</div></div>
+          <div class="t-row"><div class="time">13:40</div><div><div class="title-ko">기념사</div></div><div class="speaker">김명신 교수 (서울성모병원 진료부원장)</div></div>
+          <div class="t-row"><div class="time">13:45</div><div><div class="title-ko">격려사</div></div><div class="speaker">이동건 학장 (가톨릭대학교 의과대학장)</div></div>
+          <div class="t-row"><div class="time">13:50</div><div><div class="title-ko">축사</div></div><div class="speaker">문한림 (한국임상약리학회 회장, 메디라마 대표이사)</div></div>
+        </div>
+
+        <div class="t-session">
+          <div class="t-session-head">
+            <span class="time">14:05–15:20</span>
+            <span class="tag">Session 1 · Expert</span>
+            <h4>임상시험 산업 생태계와 디지털 전환</h4>
+            <span class="chair">좌장 : 임동석 교수 (가톨릭대학교 의과대학)</span>
+          </div>
+          <div class="t-row">
+            <div class="time">14:05–14:30</div>
+            <div><div class="title-ko">국내 CRO산업의 현재와 미래 경쟁력</div><div class="title-en">Korean CRO Industry: Current Status &amp; Future Competitiveness</div></div>
+            <div class="speaker">안병진 (C&amp;R 리서치)</div>
+          </div>
+          <div class="t-row">
+            <div class="time">14:30–14:55</div>
+            <div><div class="title-ko">글로벌 신약개발 파트너십과 다국가 임상시험 전략</div><div class="title-en">Global Drug Development Partnerships &amp; Multinational Trial Strategy</div></div>
+            <div class="speaker">한영지 (Avance Clinical Korea)</div>
+          </div>
+          <div class="t-row">
+            <div class="time">14:55–15:20</div>
+            <div><div class="title-ko">디지털헬스 기반 DCT 플랫폼 적용 사례</div><div class="title-en">Digital Health-based DCT Platforms: Case Studies</div></div>
+            <div class="speaker">이수연 연구관 (국립보건연구원 헬스케어인공지능연구과)</div>
+          </div>
+          <div class="t-row break"><div class="time">15:20–15:35</div><div><div class="title-ko">포스터 세션 + 커피브레이크</div></div><div class="speaker"></div></div>
+        </div>
+
+        <div class="t-session">
+          <div class="t-session-head">
+            <span class="time">15:35–16:50</span>
+            <span class="tag">Session 2 · Collaborator</span>
+            <h4>초기임상 개발전략과 규제 협력</h4>
+            <span class="chair">좌장 : 채동우 (연세대학교 의과대학)</span>
+          </div>
+          <div class="t-row">
+            <div class="time">15:35–16:00</div>
+            <div><div class="title-ko">테라노스틱스 방사성의약품의 초기임상 개발전략</div><div class="title-en">Early-Phase Development Strategy for Theranostic Radiopharmaceutical</div></div>
+            <div class="speaker">박현수 박사</div>
+          </div>
+          <div class="t-row">
+            <div class="time">16:00–16:25</div>
+            <div><div class="title-ko">적응적 임상시험설계(Adaptive Design)의 규제적 수용</div><div class="title-en">Regulatory Acceptance of Adaptive Trial Design</div></div>
+            <div class="speaker">이종태 박사 (Alnylam · Zoom)</div>
+          </div>
+          <div class="t-row">
+            <div class="time">16:25–16:50</div>
+            <div><div class="title-ko">국내 초기임상시험 현재와 나아갈 길</div><div class="title-en">Current State and Future Direction of Early-Phase Clinical Trials in Korea</div></div>
+            <div class="speaker">홍태곤 선생님 (양지병원)</div>
+          </div>
+          <div class="t-row break"><div class="time">16:50–17:05</div><div><div class="title-ko">포스터 세션 + 커피브레이크</div></div><div class="speaker"></div></div>
+        </div>
+
+        <div class="t-session">
+          <div class="t-session-head">
+            <span class="time">17:05–18:20</span>
+            <span class="tag">Session 3 · Innovation</span>
+            <h4>AI × 임상약리학의 미래</h4>
+            <span class="chair">좌장 : 송윤경 (가톨릭대학교 약학대학)</span>
+          </div>
+          <div class="t-row">
+            <div class="time">17:05–17:30</div>
+            <div><div class="title-ko">AI 기반 약동학-약력학(PK/PD) 모델링과 임상적용(QSP)</div><div class="title-en">AI-based PK/PD Modeling &amp; Clinical Application (QSP)</div></div>
+            <div class="speaker">한성필 (가톨릭대학교 의과대학)</div>
+          </div>
+          <div class="t-row">
+            <div class="time">17:30–17:55</div>
+            <div><div class="title-ko">머신러닝 기반 개인맞춤형 약물치료 최적화</div><div class="title-en">Machine Learning for Personalized Pharmacotherapy Optimization</div></div>
+            <div class="speaker">박태민 (경희대학교 규제과학과)</div>
+          </div>
+          <div class="t-row"><div class="time">17:55–18:00</div><div><div class="title-ko">폐회사</div></div><div class="speaker"></div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-gaters">
+      <div class="timeline">
+        <div class="t-session">
+          <div class="t-session-head">
+            <span class="time">09:40–11:40</span>
+            <span class="tag">GATERS 2026 · Satellite</span>
+            <h4>글로벌 임상시험 네트워크와 규제 혁신</h4>
+            <span class="chair">좌장 : 정은경 (경희대학교 규제과학과)</span>
+          </div>
+          <div class="t-row"><div class="time">09:00–09:30</div><div><div class="title-ko">등록</div></div><div class="speaker"></div></div>
+          <div class="t-row"><div class="time">09:30–09:40</div><div><div class="title-ko">개회사</div></div><div class="speaker">정은경 (GATERS 조직위원장)</div></div>
+          <div class="t-row">
+            <div class="time">09:40–10:10</div>
+            <div><div class="title-ko">탈중앙임상시험(DCT)의 아시아 네트워크</div><div class="title-en">Asian Networks for Decentralized Clinical Trials</div></div>
+            <div class="speaker">Dr. Funakoshi Kouta (Kyushu Univ. · Zoom)</div>
+          </div>
+          <div class="t-row">
+            <div class="time">10:10–10:40</div>
+            <div><div class="title-ko">FDA NAMs(신대체시험법) 최신 규제동향과 시사점</div><div class="title-en">FDA NAMs: Recent Regulatory Trends &amp; Implications</div></div>
+            <div class="speaker">Kyung Sung (FDA · Zoom)</div>
+          </div>
+          <div class="t-row">
+            <div class="time">10:50–11:20</div>
+            <div><div class="title-ko">Leveraging the MPRINT Knowledge Portal for Pharmacology Evidence Generation</div></div>
+            <div class="speaker">Dr. Aditi Shendre, PhD (The Ohio State University)</div>
+          </div>
+          <div class="t-row"><div class="time">11:20–11:40</div><div><div class="title-ko">종합토론 및 Q&amp;A</div></div><div class="speaker">GATERS 전체 연자</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="poster">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--navy-2)">POSTER SESSION</span>
+    <h2 class="section-title">포스터 세션 · 10 Presentations</h2>
+    <p class="section-desc">연구원 및 대학원생이 참여하는 포스터 세션이 Session 1, 2 사이 커피브레이크 시간에 진행됩니다.</p>
+
+    <div class="poster-layout" style="margin-top:32px;">
+      <div>
+        <div class="poster-frame">
+          <a href="assets/poster.pdf" target="_blank" rel="noopener">
+            <img src="assets/poster-web.jpg" alt="AI 신약규제과학 학술심포지엄 포스터">
+          </a>
+        </div>
+        <a class="btn btn-outline" style="width:100%;margin-top:14px;" href="assets/poster.pdf" target="_blank" rel="noopener">포스터 PDF 다운로드</a>
+      </div>
+
+      <div class="poster-list">
+        <div class="poster-item"><div class="pnum">P01</div><div><div class="p-title">Phase I Randomized Study of SCAI-005 Ophthalmic Solution: Safety, Tolerability, and Pharmacokinetics in Healthy Korean Adults</div><div class="p-sub">강주은, 박경민, 최수인 외 · 가톨릭대학교 의과대학</div></div></div>
+        <div class="poster-item"><div class="pnum">P02</div><div><div class="p-title">Volume Kinetics of Crystalloid Infusions in Living Kidney Donors: A NONMEM Two-Compartment Analysis</div><div class="p-sub">서울성모병원 임상약리과</div></div></div>
+        <div class="poster-item"><div class="pnum">P03</div><div><div class="p-title">Development of a QSP Model for Predicting Drug Responses in Knee Osteoarthritis</div><div class="p-sub">가톨릭중앙의료원 임상시험센터</div></div></div>
+        <div class="poster-item"><div class="pnum">P04</div><div><div class="p-title">Model-Informed Precision Dosing of Piperacillin–Tazobactam Using PBPK Modeling</div><div class="p-sub">경희대학교 규제과학과</div></div></div>
+        <div class="poster-item"><div class="pnum">P05</div><div><div class="p-title">Pharmacology of Induced Artificial Platelets in Regenerative Medicine: Beyond Transfusion</div><div class="p-sub">서울성모병원 임상약리과</div></div></div>
+        <div class="poster-item"><div class="pnum">P06</div><div><div class="p-title">Leveraging Large Language Models in Pharmacometrics: NONMEM Output Interpretation &amp; Simulation</div><div class="p-sub">가톨릭대학교 약학대학</div></div></div>
+        <div class="poster-item"><div class="pnum">P07</div><div><div class="p-title">Advancing Gynecological Therapeutics with QSP Model: Applications for GnRH Antagonist</div><div class="p-sub">사단법인 청람바이오아카데미</div></div></div>
+        <div class="poster-item"><div class="pnum">P08</div><div><div class="p-title">Pharmacology of Induced Artificial Platelets in Regenerative Medicine: Beyond Transfusion</div><div class="p-sub">서울성모병원 임상약리과</div></div></div>
+        <div class="poster-item"><div class="pnum">P09</div><div><div class="p-title">Computational Modeling of Multi-organ Microphysiological Systems for Human PK Prediction</div><div class="p-sub">가톨릭중앙의료원 임상시험센터</div></div></div>
+        <div class="poster-item"><div class="pnum">P10</div><div><div class="p-title">Population PK-PD and QSP Model-Based Dose Optimization of Oral GnRH Antagonist Merigolix for Endometriosis</div><div class="p-sub">가톨릭대학교 의과대학</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="apply" style="background:#fff;">
+  <div class="wrap">
+    <div class="reg">
+      <div class="reg-grid">
+        <div>
+          <span class="eyebrow">REGISTRATION</span>
+          <h2 class="section-title">참가신청</h2>
+          <p class="section-desc">아래 버튼 또는 QR코드를 통해 Google Form으로 이동하여 참가신청을 완료해 주세요.</p>
+          <div class="reg-fields">
+            <span>이름</span><span>소속</span><span>연락처</span><span>이메일</span>
+          </div>
+          <a class="btn btn-primary" href="https://forms.gle/Mur73yG9cTGG7r9Z7" target="_blank" rel="noopener">Google Form으로 참가신청하기 →</a>
+        </div>
+        <div class="qr-box">
+          <img src="assets/qr.png" alt="참가신청 페이지 QR코드">
+          <div class="cap">QR 스캔 → 본 페이지 접속</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="venue">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--navy-2)">VENUE</span>
+    <h2 class="section-title">오시는 길</h2>
+
+    <div class="venue-card" style="margin-top:28px;">
+      <div class="venue-top">
+        <div>
+          <h3 style="font-size:20px;font-weight:800;">엘리에나호텔 서울 강남</h3>
+          <p style="color:var(--muted);margin-top:6px;">2F 컨벤션홀</p>
+        </div>
+        <div class="venue-actions">
+          <a class="btn btn-outline" href="https://map.naver.com/p/search/엘리에나호텔%20서울%20강남" target="_blank" rel="noopener">네이버 지도</a>
+          <a class="btn btn-outline" href="https://map.kakao.com/?q=엘리에나호텔%20서울%20강남" target="_blank" rel="noopener">카카오맵</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;">
+  <div class="wrap">
+    <p style="font-weight:700;color:var(--muted);font-size:13px;letter-spacing:.05em;">후원</p>
+    <div class="sponsor-row"><span>식품의약품안전처</span></div>
+    <p style="font-weight:700;color:var(--muted);font-size:13px;letter-spacing:.05em;margin-top:26px;">주관</p>
+    <div class="sponsor-row">
+      <span>서울성모병원 임상약리과</span>
+      <span>사단법인 청람바이오아카데미</span>
+      <span>가톨릭대학교 약학대학</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <div class="f-brand">AI 신약규제과학 학술심포지엄</div>
+        <p style="margin-top:8px;max-width:420px;">서울성모병원 임상약리과 20주년 개소 기념 · 2026. 9. 30.(수) · 엘리에나호텔 서울 강남</p>
+      </div>
+      <div>
+        <p>문의: 서울성모병원 임상약리과</p>
+        <p>참가신청: <a href="https://forms.gle/Mur73yG9cTGG7r9Z7" target="_blank" rel="noopener" style="text-decoration:underline;">Google Form</a></p>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 Seoul St. Mary's Hospital · Clinical Pharmacology &amp; Therapeutics</span>
+    </div>
+  </div>
+</footer>
+
+<a class="btn btn-primary fab" href="https://forms.gle/Mur73yG9cTGG7r9Z7" target="_blank" rel="noopener">참가신청</a>
+
+<script>
+  // Tabs
+  document.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // Countdown to 2026-09-30 09:00 KST
+  const target = new Date('2026-09-30T09:00:00+09:00').getTime();
+  function tick(){
+    const now = Date.now();
+    const diff = target - now;
+    const el = {d:document.getElementById('cd-d'),h:document.getElementById('cd-h'),m:document.getElementById('cd-m'),s:document.getElementById('cd-s')};
+    if(diff <= 0){ el.d.textContent='0'; el.h.textContent='0'; el.m.textContent='0'; el.s.textContent='0'; return; }
+    const d = Math.floor(diff/86400000);
+    const h = Math.floor((diff%86400000)/3600000);
+    const m = Math.floor((diff%3600000)/60000);
+    const s = Math.floor((diff%60000)/1000);
+    el.d.textContent=d; el.h.textContent=h; el.m.textContent=m; el.s.textContent=s;
+  }
+  tick();
+  setInterval(tick,1000);
+</script>
+
+</body>
+</html>
