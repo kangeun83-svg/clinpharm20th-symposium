@@ -165,14 +165,14 @@
   .t-session-head h4{font-size:18px;font-weight:800;}
   .t-session-head .chair{font-size:13px;color:var(--muted);margin-left:auto;}
   .t-row{
-    display:grid;grid-template-columns:120px 1fr 200px;gap:14px;
+    display:grid;grid-template-columns:110px 1fr minmax(220px,340px);gap:14px;
     padding:14px 0;border-bottom:1px solid var(--line);align-items:start;
   }
   .t-row:last-child{border-bottom:none;}
   .t-row .time{font-weight:700;color:var(--navy-2);font-size:13.5px;white-space:nowrap;}
   .t-row .title-ko{font-weight:700;font-size:15px;}
   .t-row .title-en{font-size:13px;color:var(--muted);margin-top:2px;}
-  .t-row .speaker{font-size:13.5px;color:var(--muted);text-align:right;}
+  .t-row .speaker{font-size:13px;color:var(--muted);text-align:right;white-space:nowrap;}
   .t-row.break{background:#f6f8fb;border-radius:10px;padding:12px 14px;}
   .t-row.break .title-ko{color:var(--muted);font-weight:600;}
 
@@ -248,7 +248,7 @@
     .poster-layout{grid-template-columns:1fr;}
     .reg-grid{grid-template-columns:1fr;}
     .t-row{grid-template-columns:1fr;gap:4px;}
-    .t-row .speaker{text-align:left;}
+    .t-row .speaker{text-align:left;white-space:normal;}
     section{padding:64px 0;}
     .reg{padding:32px 22px;}
   }
@@ -421,7 +421,7 @@
           <div class="t-row">
             <div class="time">15:35–16:00</div>
             <div><div class="title-ko">테라노스틱스 방사성의약품의 초기임상 개발전략</div><div class="title-en">Early-Phase Development Strategy for Theranostic Radiopharmaceutical</div></div>
-            <div class="speaker">박현수 박사</div>
+            <div class="speaker">박현수 박사 (몰림)</div>
           </div>
           <div class="t-row">
             <div class="time">16:00–16:25</div>
