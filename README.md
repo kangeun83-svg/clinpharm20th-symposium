@@ -25,10 +25,11 @@ assets/qr-poster.png 포스터 PDF로 바로 연결되는 QR코드
 5. **Build and deployment → Source**를 `Deploy from a branch`로 설정
 6. **Branch**를 `main` / `/ (root)`로 설정 후 **Save**
 7. 1~2분 후 같은 화면 상단에 뜨는 주소로 접속 확인
-   - 예: `https://kangeun83-svg.github.io/clinpharm20th-symposium/`
+   - 현재 실제 접속 주소(커스텀 도메인): `https://cmccpt20y.kr/`
 
-> ⚠️ 저장소 이름을 위 예시(`clinpharm20th-symposium`)와 다르게 만들면, 실제 접속 주소가 바뀌므로
-> `assets/qr.png`의 QR코드가 가리키는 주소와 달라집니다. 이름을 바꿀 경우 QR코드를 다시 생성해야 합니다.
+> ⚠️ 저장소 소유자를 다른 계정으로 이전(Transfer)하거나 저장소 이름을 바꾸면, 커스텀 도메인을 연결해두지 않은 상태에서는
+> 실제 접속 주소가 바뀝니다. 그러면 `assets/qr.png`, `assets/qr-poster.png`의 QR코드가 가리키는 주소와 달라지므로 QR코드를 다시 생성해야 합니다.
+> (현재는 `cmccpt20y.kr` 커스텀 도메인을 연결해둔 상태라, 저장소 소유자가 다시 바뀌어도 GitHub Pages 쪽 커스텀 도메인 설정만 유지되면 이 주소는 그대로 유지됩니다.)
 
 ## 내용 수정하기
 
